@@ -1,0 +1,61 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>CommonFilter</filter-name>
+  	<display-name>CommonFilter</display-name>
+  	<description></description>
+  	<filter-class>com.java.filter.CommonFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>HomeFilter</filter-name>
+  	<display-name>HomeFilter</display-name>
+  	<description></description>
+  	<filter-class>com.java.filter.HomeFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>AboutUsFilter</filter-name>
+  	<display-name>AboutUsFilter</display-name>
+  	<description></description>
+  	<filter-class>com.java.filter.AboutUsFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>CommonFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>HomeFilter</filter-name>
+  	<url-pattern>/home</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>AboutUsFilter</filter-name>
+  	<url-pattern>/about-us</url-pattern>
+  </filter-mapping>
+  <listener>
+  	<listener-class>com.java.listener.AppContextListener</listener-class>
+  </listener>
+  
+  <servlet>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<display-name>HomeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.java.servlet.HomeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AboutUsServlet</servlet-name>
+  	<display-name>AboutUsServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.java.servlet.AboutUsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AboutUsServlet</servlet-name>
+  	<url-pattern>/about-us</url-pattern>
+  </servlet-mapping>
+</web-app>
